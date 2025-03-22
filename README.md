@@ -3,7 +3,8 @@
 Welcome to my portfolio! This webpage showcases my skills, projects, and experience as a web developer. I have built this portfolio using HTML, CSS, and JavaScript, demonstrating my proficiency in creating modern, responsive, and interactive websites.
 
 ## 🚀 Live Demo
-Check out the live version of the portfolio at: https://portfolio-b24n7ownp-shubhankit-bhardwajs-projects-be2236c2.vercel.app/
+Check out the live version of the portfolio at: portfolio-shubhankit.vercel.app
+
 
 ## 🛠️ Technologies Used
 
