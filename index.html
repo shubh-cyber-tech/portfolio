@@ -4,18 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubhankit Bhardwaj - Portfolio</title>
+    <script>
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.dataset.theme = savedTheme || preferredTheme;
+        } catch (error) {
+            document.documentElement.dataset.theme = 'light';
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="preloader" aria-hidden="true">
+        <div class="loader-mark">SB</div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">SB</div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-buttons">
@@ -31,6 +52,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-particles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="hero-content">
             <h1>Hi! I'm <span class="highlight">Shubhankit Bhardwaj</span></h1>
             <p class="typing-text">Innovator by Heart, Coder by Passion</p>
@@ -46,6 +73,12 @@
                 </a>
             </div>
         </div>
+        <div class="hero-visual tilt-card" data-tilt>
+            <div class="profile-orbit"></div>
+            <img src="IMG_20250306_202856.jpg" alt="Shubhankit Bhardwaj profile">
+            <div class="floating-badge badge-code"><i class="fas fa-code"></i> MERN</div>
+            <div class="floating-badge badge-rating"><i class="fas fa-trophy"></i> 300+ Problems</div>
+        </div>
         <div class="scroll-indicator">
             <div class="mouse"></div>
             <p>Explore my journey</p>
@@ -59,7 +92,7 @@
             <div class="about-text">
                 <div class="about-description">
                     <p>Hi, I'm a Software Developer and Competitive Programmer with a passion for solving complex problems and building innovative solutions. Currently pursuing my B.Tech in Computer Science Engineering at G.L.A. University, I specialize in Data Structures & Algorithms (DSA) and Full-Stack Development (MERN).</p>
-                    <p>With a Codeforces rating of 1400 and a LeetCode rating of 1700, I have solved 600+ problems, showcasing my strong problem-solving skills and algorithmic expertise. I love developing efficient, scalable, and user-centric applications, bringing ideas to life through code.</p>
+                    <p>With a Codeforces rating of 1400 and a LeetCode rating of 1700, I have solved 300+ problems, showcasing my strong problem-solving skills and algorithmic expertise. I love developing efficient, scalable, and user-centric applications, bringing ideas to life through code.</p>
                     <p>Always eager to learn and grow, I am driven by the challenge of optimizing solutions and crafting seamless digital experiences. Let's build something amazing together! 🚀</p>
                 </div>
                 <div class="about-details">
@@ -147,6 +180,27 @@
                         <span>Java</span>
                         <span>Spring Boot</span>
                         <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80" alt="Smart Grocery Store">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://kirana-store-client.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Smart Grocery Store</h3>
+                    <p>A MERN-based smart grocery store project for Shambhoo Dayal and Sons, designed to manage products, billing, inventory, and customer purchase workflows with a clean digital interface.</p>
+                    <div class="project-tech">
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                        <span>React</span>
+                        <span>Node.js</span>
                     </div>
                 </div>
             </div>
@@ -372,7 +426,7 @@
                                     <ul>
                                         <li>Codeforces Rating: 1400</li>
                                         <li>LeetCode Rating: 1700</li>
-                                        <li>600+ Problems Solved</li>
+                                        <li>300+ Problems Solved</li>
                                         <li>Algorithm Optimization</li>
                                         <li>Dynamic Programming</li>
                                         <li>Greedy Algorithms</li>
@@ -494,6 +548,37 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Experience Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content tilt-card" data-tilt>
+                    <span class="timeline-date">Now</span>
+                    <h3>Software Developer</h3>
+                    <p>Building responsive, user-centric web applications with modern frontend patterns and backend APIs.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content tilt-card" data-tilt>
+                    <span class="timeline-date">Competitive Programming</span>
+                    <h3>DSA and Problem Solving</h3>
+                    <p>Sharpening algorithmic thinking with 300+ solved problems across Codeforces and LeetCode.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content tilt-card" data-tilt>
+                    <span class="timeline-date">Education</span>
+                    <h3>B.Tech Computer Science</h3>
+                    <p>Studying Computer Science Engineering at G.L.A. University with a focus on scalable software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
@@ -520,7 +605,8 @@
                     <textarea id="message" required></textarea>
                     <label for="message">Message</label>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                <p class="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </section>
