@@ -207,6 +207,30 @@ function initParallax() {
     }, { passive: true });
 }
 
+function initLaptopIntro() {
+    const story = qs('.laptop-story');
+    if (!story || prefersReducedMotion) return;
+    let ticking = false;
+    const update = () => {
+        const rect = story.getBoundingClientRect();
+        const travel = Math.max(1, story.offsetHeight - window.innerHeight);
+        const progress = Math.min(1, Math.max(0, -rect.top / travel));
+        story.style.setProperty('--open', progress.toFixed(3));
+        const laptop = qs('.laptop', story);
+        const hint = qs('.laptop-hint', story);
+        if (laptop) laptop.style.setProperty('--chassis-opacity', String(1 - progress));
+        if (hint) hint.style.opacity = String(1 - progress * 2.5);
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+    update();
+}
+
 function initSkillBars() {
     const skillCards = qsa('.skill-card');
     skillCards.forEach((card, index) => {
@@ -264,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMagneticButtons();
     initCursorGlow();
     initParallax();
+    initLaptopIntro();
     initReadMore();
     initContactForm();
 });

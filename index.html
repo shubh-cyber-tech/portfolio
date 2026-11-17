@@ -20,6 +20,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="code-atmosphere" aria-hidden="true">
+        <pre class="code-fragment code-fragment-one"><span>const</span> buildExperience = <span>async</span> () =&gt; {
+  <b>const</b> idea = await listen();
+  <b>return</b> idea.map(makeReal);
+};</pre>
+        <pre class="code-fragment code-fragment-two"><span>class</span> Engineer {
+  solve(problem) {
+    <b>return</b> ship(solution);
+  }
+}</pre>
+        <pre class="code-fragment code-fragment-three"><span>while</span> (curious) {
+  learn();
+  build();
+  improve();
+}</pre>
+        <div class="code-grid"></div>
+    </div>
     <div class="cursor-glow" aria-hidden="true"></div>
     <div class="site-watermark" aria-hidden="true">
         <img src="https://drive.google.com/thumbnail?id=1rQTGQ3HwQTf6ljwoLB1moC8P5CzMZM6A&sz=w800" alt="">
@@ -57,38 +74,24 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-particles" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="hero-content">
-            <h1>Hi! I'm <span class="highlight">Shubhankit Bhardwaj</span></h1>
-            <p class="typing-text">Innovator by Heart, Coder by Passion</p>
-            <p class="hero-description">I love turning ideas into reality through code. From building dynamic web apps to solving challenges in competitive programming.</p>
-            <div class="social-links">
-                <a href="https://github.com/shubh-cyber-tech" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/shubhankit-bhardwaj-55b474251/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <!-- Laptop intro: the screen opens into the portfolio as you scroll -->
+    <section id="home" class="laptop-story">
+        <div class="laptop-stage">
+            <div class="laptop" aria-label="Portfolio intro displayed on a laptop screen">
+                <div class="laptop-screen">
+                    <div class="screen-bar"><span></span><span></span><span></span><small>shubhankit.dev</small><i class="fas fa-wifi"></i></div>
+                    <div class="screen-content">
+                        <div class="screen-kicker"><span class="status-dot"></span> SOFTWARE ENGINEER · OPEN TO OPPORTUNITIES</div>
+                        <h1>Building thoughtful<br><span>digital experiences.</span></h1>
+                        <p class="screen-name">Hi, I’m <strong>Shubhankit Bhardwaj</strong> — software engineer and problem solver.</p>
+                        <div class="screen-actions"><a href="#projects" class="cta-button">Explore my work <i class="fas fa-arrow-down"></i></a><a href="https://drive.google.com/file/d/1Hf6V6pWwxTBGrLNeVTUURXjuxgBA5BXz/view?usp=drive_link" class="screen-resume" target="_blank" rel="noopener noreferrer">View résumé <i class="fas fa-arrow-up-right-from-square"></i></a></div>
+                        <div class="screen-footer"><span><i class="fas fa-code"></i> Full-stack development</span><span><i class="fas fa-terminal"></i> 300+ problems solved</span><span>SCROLL TO EXPLORE ↓</span></div>
+                    </div>
+                    <div class="screen-grid" aria-hidden="true"></div>
+                </div>
+                <div class="laptop-base"><div class="laptop-notch"></div></div>
             </div>
-            <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Contact Me</a>
-                <a href="https://drive.google.com/file/d/1Hf6V6pWwxTBGrLNeVTUURXjuxgBA5BXz/view?usp=drive_link" class="resume-btn" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-download"></i> My Resume
-                </a>
-            </div>
-        </div>
-        <div class="hero-visual tilt-card" data-tilt>
-            <div class="profile-orbit"></div>
-            <img src="https://drive.google.com/thumbnail?id=1ZT5kBqTCVXCJDO88DYTVhSPwGaCLxbY_&sz=w1200" alt="Shubhankit Bhardwaj profile">
-            <div class="floating-badge badge-code"><i class="fas fa-code"></i> MERN</div>
-            <div class="floating-badge badge-rating"><i class="fas fa-trophy"></i> 300+ Problems</div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-            <p>Explore my journey</p>
+            <p class="laptop-hint">A portfolio, booting up <span>↓</span></p>
         </div>
     </section>
 
